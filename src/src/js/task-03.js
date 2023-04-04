@@ -14,18 +14,12 @@ const images = [
 ];
 
 const navEl = document.querySelector('.gallery');
-console.log(navEl);
 
 const listImages = images.map(({url, alt}) => 
 `<li><img class="image" src="${url}" alt="${alt}" width="400"><li>`
 
 ).join("");
 
-
-console.log(listImages);
-
 navEl.insertAdjacentHTML("afterbegin", listImages);
 
 navEl.style.listStyle = "none";
-
-// по какой логике вписалась лишка

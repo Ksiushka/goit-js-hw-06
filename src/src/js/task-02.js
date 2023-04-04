@@ -7,7 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-const navEl = document.querySelector('ul#ingredients');
+const navEl = document.querySelector('#ingredients');
 
 const listIngredients = ingredients.map(ingredient => {
   let item = document.createElement('li');
@@ -17,9 +17,6 @@ const listIngredients = ingredients.map(ingredient => {
 }
 );
 
-// console.log(listIngredients);
-
 navEl.append(...listIngredients);
 console.log(navEl)
 
-//троеточие, append not appendChild

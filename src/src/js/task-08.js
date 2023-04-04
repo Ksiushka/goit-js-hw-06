@@ -7,25 +7,18 @@ function onFormSubmit(event) {
     
     const formElements = event.currentTarget.elements;
 
-    const mail = formElements.email.value;
-    const password = formElements.password.value;
+    const mail = formElements.email.value.trim();
+    const password = formElements.password.value.trim();
 
     const formData = {
         mail,
         password,
     }
 
-    if (formData.length <= 0) {
-        return ('alert');
+    if (mail === '' || password === '') {
+        return alert('pleas, feel out');
     }
-    else {
-        return;
-    };
-
+     
+    console.log(formData);
     event.currentTarget.reset();
-
-    console.log(formElements);
-    console.log(mail, password);
-    console.log(formData)
-    
 }

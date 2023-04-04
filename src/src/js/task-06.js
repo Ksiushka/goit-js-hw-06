@@ -11,7 +11,7 @@ function onInputFocus() {
 }
 
 function onInputBlur(event) {
-    if (event.currentTarget.value.length === Number(inputLength)) {
+    if (event.currentTarget.value.trim().length === Number(inputLength)) {
         input.classList.remove('invalid');
         input.classList.add('valid');
     }
